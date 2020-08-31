@@ -6,6 +6,26 @@
     <title>글쓰기</title>
 </head>
 <body>
-    <div class="title"> </div>
+    <form class="form-horizontal" role="form" method="post">
+        <div class="register-group" id="title">
+            <label for="inputTitle" class="col-lg-2 control-label"> 제목 </label>
+            <div class="col-lg-10">
+                <input type="text" name="title" class="form-control onlyNumber" id="title" data-rule-required="true"
+                    placeholder="제목을 입력 하세요" maxlength="50" required>
+            </div>
+        </div>
+
+        <div class="register-group" id="content">
+            <label for="inputContent" class="col-lg-2 control-label"> 내용 </label>
+            <div class="col-lg-10">
+                <input type="text" name="content" class="form-control onlyNumber" id="content" data-rule-required="true"
+                    placeholder="내용을 입력하세요" maxlength="500" required>
+            </div>
+        </div>
+        //이미지 넣는 칸 추가하기// 
+
+
+     </form>
+   
 </body>
 </html>
