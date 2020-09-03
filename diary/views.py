@@ -3,7 +3,6 @@ from django.urls import reverse
 from .models import Post
 from .forms import PostForm
 
-<<<<<<< HEAD
 
 # Create your views here.
 
@@ -12,7 +11,7 @@ def board(request):
 
 def diarypage(request):
     return render(request, "diarypage.html")
-=======
+
 def main(request):
     posts = Post.objects
     return render(request, 'create.html', {'posts':posts})
@@ -31,11 +30,7 @@ def create(request):
         form = PostForm()
     return render(request, 'create.html', {'form':form})
 
-def board(request):
-    return render(request, 'board.html')
-
 def delete(request, pk):
     post = Post.objects.get(pk = pk)
     post.delete()
     return redirect('home')
->>>>>>> 58d59258a8195ed83c69d40164ce88191bfb71be
