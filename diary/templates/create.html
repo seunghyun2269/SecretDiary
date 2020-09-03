@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+</head>
+<body>
+    <form class="form-horizontal" role="form" method="post">
+        <div class="create-group" id="title">
+            <label for="inputTitle" class="col-lg-2 control-label"> 제목 </label>
+            <div class="col-lg-10">
+                <input type="text" name="title" class="form-control onlyNumber" id="title" data-rule-required="true"
+                    placeholder="제목을 입력 하세요" maxlength="50" required>
+            </div>
+        </div>
+
+        <div class="create-group" id="content">
+            <label for="inputContent" class="col-lg-2 control-label"> 내용 </label>
+            <div class="col-lg-10">
+                <input type="text" name="content" class="form-control onlyNumber" id="content" data-rule-required="true"
+                    placeholder="내용을 입력하세요" maxlength="500" required>
+            </div>
+        </div>
+        //이미지 넣는 칸 추가하기// 
+
+
+     </form>
+   
+</body>
+</html>
+=======
+{% load static %}
+
+{% block content %}
+
+<div class = "container">
+    <h1>create</h1>
+    <br><br><br>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" value="등록하기" class="btn btn-info">
+    </form>
+</div>
+
+{% endblock content %}
+>>>>>>> 58d59258a8195ed83c69d40164ce88191bfb71be

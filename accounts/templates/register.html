@@ -1,0 +1,117 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요한) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- 모든 합쳐진 플러그인을 포함하거나 (아래) 필요한 각각의 파일들을 포함하세요 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="masthead mb-auto">
+    </header>
+    <form class="form-horizontal" role="form" method="post">
+        <div class="form-group" id="divId">
+            <label for="inputId" class="col-lg-2 control-label">아이디</label>
+            <div class="col-lg-10">
+                <input type="text" name="id" class="form-control onlyNumber" id="id" data-rule-required="true"
+                    placeholder="15자 이내의 아이디를 입력 해 주세요" maxlength="15" required>
+            </div>
+        </div>
+        <div class="form-group" id="divPassword">
+            <label for="inputPassword" class="col-lg-2 control-label">패스워드</label>
+            <div class="col-lg-10">
+                <input type="password" name="pw" class="form-control" id="password" name="excludeHangul" data-rule-required="true"
+                    placeholder="영문자와 숫자만 입력 가능합니다" maxlength="30" required>
+            </div>
+        </div>
+        <div class="form-group" id="divPasswordCheck">
+            <label for="inputPasswordCheck" class="col-lg-2 control-label">패스워드 확인</label>
+            <div class="col-lg-10">
+                <input type="password" name="pw2" class="form-control" id="passwordCheck" data-rule-required="true"
+                    placeholder="패스워드를 다시 입력해 주세요" maxlength="30" required>
+            </div>
+        </div><br>
+        <div class="form-group" id="divName">
+            <label for="inputName" class="col-lg-2 control-label">이름</label>
+            <div class="col-lg-10">
+                <input type="text" name="name" class="form-control onlyHangul" id="name" data-rule-required="true"
+                    placeholder="한글만 입력 가능합니다." maxlength="15" required>
+            </div>
+        </div>
+        <div class="form-group" id="divEmail">
+            <label for="inputEmail" class="col-lg-2 control-label">이메일</label>
+            <div class="col-lg-10">
+                <input type="email" name="email" class="form-control" id="email" data-rule-required="true" placeholder="(주의) 이미 인증된 이메일 이용 시 에러 발생"
+                    maxlength="40" required>
+            </div>
+        </div>
+        <div class="form-group" id="divPhoneNumber">
+            <label for="inputPhoneNumber" class="col-lg-2 control-label">휴대폰 번호</label>
+            <div class="col-lg-10">
+                <input type="tel" name="phone_number" class="form-control onlyNumber" id="phoneNumber" data-rule-required="true"
+                    placeholder="-를 제외하고 숫자만 입력하세요." maxlength="11" required>
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+        $(function () {
+            //모달을 전역변수로 선언
+            var modalContents = $(".modal-contents");
+            var modal = $("#defaultModal");
+
+            $('.onlyAlphabetAndNumber').keyup(function (event) {
+                if (!(event.keyCode >= 37 && event.keyCode <= 40)) {
+                    var inputVal = $(this).val();
+                    $(this).val($(this).val().replace(/[^_a-z0-9]/gi, '')); //_(underscore), 영어, 숫자만 가능
+                }
+            });
+
+            $(".onlyHangul").keyup(function (event) {
+                if (!(event.keyCode >= 37 && event.keyCode <= 40)) {
+                    var inputVal = $(this).val();
+                    $(this).val(inputVal.replace(/[a-z0-9]/gi, ''));
+                }
+            });
+
+            $(".onlyNumber").keyup(function (event) {
+                if (!(event.keyCode >= 37 && event.keyCode <= 40)) {
+                    var inputVal = $(this).val();
+                    $(this).val(inputVal.replace(/[^0-9]/gi, ''));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+=======
+회원가입 페이지 
+
+<br>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>아이디</p>
+    <input name="userid" type="text">
+    <p>비밀번호</p>
+    <input name="password" type="password">    
+    <p>성</p>
+    <input name="firstname" type="text">
+    <p>이름</p>
+    <input name="lastname" type="text">
+    <p>이메일</p>
+    <input name="email" type="text">
+    
+    <input type="submit" value="회원가입">
+
+</form>
+>>>>>>> 58d59258a8195ed83c69d40164ce88191bfb71be
