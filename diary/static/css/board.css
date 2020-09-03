@@ -1,0 +1,118 @@
+body {
+	margin:0; 
+	padding:0
+}
+
+.header {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	margin: 0%;
+    background-color: #6FA0BF; 
+    text-align: center;
+}
+
+.logo::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 3px;
+	margin: 0 4px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.logo {
+	text-decoration: none;
+	line-height: 1.5;
+	background-image: url('../images/diaryemoji.png');
+	background-repeat: no-repeat;
+	background-position: 10px;
+	background-size: contain;  
+
+}
+
+.logo h1 {
+	font-family: 'Recursive', sans-serif;
+	display: inline-block;
+	color: #133e52;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.container {
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	width: 100%;
+	font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.link {
+	text-align: center;
+	font-family: 'Nanum Gothic', sans-serif;
+  
+
+}
+
+.link a {
+	width: 100px;
+	height: 20px;
+	background-color: #9eceec;
+	border: none;
+	color: rgb(90, 90, 90)5, 83, 83);
+	padding: 8px 10px;
+	text-align: center;
+	display: inline-block;
+	font-size: 17px;
+	font-weight: 400;
+	margin: 30px 15px;
+	border-radius: 8px;
+	text-decoration: none;
+	color: black;
+	background-image: url('../images/pencilemoji.png');
+	background-repeat: no-repeat;
+	background-position: 10px;
+	background-size: 15px;
+
+
+
+}
+
+.link a:hover {
+	box-shadow: 0 0 5px 0 rgba(218, 218, 218, 0.8);
+}
+
+
+.wrapper {
+	text-align: center;
+	font-family: 'Noto Serif KR', serif;
+}
+
+.card {
+	display: inline-block;
+	width: 300px;
+	height: auto;
+	border: 10px solid #6FA0BF;
+	text-align: center;
+	margin-top: 5px;
+	margin-right: 20px;
+	margin-left: 20px;
+	vertical-align: text-top;
+	margin-bottom: 50px;
+
+}
+
+.card-title {
+	margin-block-end: 0px;
+}
+
+.card img {
+	width: 280px;
+	height: auto;
+	border: 1px solid #cecece;
+	margin-top: 10px;
+}

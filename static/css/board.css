@@ -1,0 +1,20 @@
+.wrapper {
+    text-align: center;
+    font-family : 'Noto Serif KR', serif;
+}
+
+.card {
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #cecece;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card img {
+    width: 180px;
+    border: 1px solid #cecece;
+    margin-top: 10px;
+}
+
