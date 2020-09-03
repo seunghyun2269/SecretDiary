@@ -33,9 +33,6 @@
                 <button id="btn" type="submit">LOGIN</button>
             </div>
         </form>
-        <div class="caption">
-            <a href="">FORGOT PASSWORD?</a>
-        </div>
     </section>
     <script>
         let id = $('#id');
@@ -58,5 +55,26 @@
         });
     </script>
 </body>
-
 </html>
+<br>
+
+{% if user.is_authenticated %}
+    다이어리로 가기
+<!-- ############################################################# -->
+    <!-- <a href="{% url 'main 주소 넣을 부분' %}">로그아웃</a> -->
+<!-- ############################################################# -->
+
+    <a href="{% url 'accounts:logout' %}">로그아웃</a>
+
+{% else %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input name="userid" type="text">
+        <input name="password" type="password">
+        <input type="submit" value="로그인">
+
+    </form>
+<a href="{% url 'accounts:register' %}"" > 회원가입</a>
+
+{% endif %}
