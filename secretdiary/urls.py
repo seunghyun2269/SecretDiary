@@ -1,5 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from django.urls import path, include
 from diary import views
 from django.conf import settings
