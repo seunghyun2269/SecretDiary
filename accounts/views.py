@@ -26,9 +26,9 @@ def register_view(request) :
         print(request.POST)
         userid = request.POST["userid"]
         password = request.POST["password"]
-        firstname = request.POST["firstname"]
-        lastname = request.POST["lastname"]
+        name = request.POST["name"]
         email = request.POST["email"]   
+        phonenumber = request.POST["phonenumber"]   
 
         user = User.objects.create_user(userid, password)
         user.lastname = lastname
