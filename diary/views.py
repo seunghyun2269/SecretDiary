@@ -18,12 +18,6 @@ def main(request):
     context = {'post_list': post_list}
     return render(request, 'main.html', context)
 
-'''
-def diary(request, pk):
-    post = get_object_or_404(Post, pk = pk)
-    return render(request, 'diary.html', {'post':post})
-'''
-
 def create(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
