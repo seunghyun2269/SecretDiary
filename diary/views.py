@@ -4,8 +4,6 @@ from .models import Post
 from .forms import PostForm
 
 
-# Create your views here.
-
 def board(request):
     post_list = Post.objects.all()
     context = {'post_list': post_list}
@@ -16,8 +14,9 @@ def diarypage(request, post_id):
     return render(request, "diarypage.html", {'post': post})
 
 def main(request):
-    posts = Post.objects
-    return render(request, 'create.html', {'posts':posts})
+    post_list = Post.objects.all()
+    context = {'post_list': post_list}
+    return render(request, 'create.html', context)
 
 '''
 def diary(request, pk):
@@ -35,7 +34,22 @@ def create(request):
         form = PostForm()
     return render(request, 'create.html', {'form':form})
 
-def delete(request, pk):
-    post = Post.objects.get(pk = pk)
+'''
+def update(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('diarypage', post_id)
+        
+    else:
+        form = PostForm(instance = post)
+    return render(request, 'update.html', {'form': form})
+'''
+
+def delete(request, post_id):
+    post = Post.objects.get(pk = post_id)
     post.delete()
-    return redirect('home')
+    return redirect('main')
