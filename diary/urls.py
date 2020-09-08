@@ -8,7 +8,7 @@ urlpatterns = [
     # /posts/5/ 
     path('<int:post_id>/', views.diarypage, name = 'diarypage'),
     # /posts/5/update
-    path('<int:post_id>/update', views.update, name='update'),
+    # path('<int:post_id>/update', views.update, name='update'),
     # /posts/5/delete
     path('<int:post_id>/delete/', views.delete, name = 'delete'),
 ]

@@ -16,7 +16,7 @@ def diarypage(request, post_id):
 def main(request):
     post_list = Post.objects.all()
     context = {'post_list': post_list}
-    return render(request, 'create.html', context)
+    return render(request, 'main.html', context)
 
 '''
 def diary(request, pk):
