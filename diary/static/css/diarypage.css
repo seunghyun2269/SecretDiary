@@ -30,22 +30,56 @@ body {
 
 .card-title {
 	margin-block-end: 0px;
+	font-size: 3rem;
 }
 
 .card-writer{
-    font-size: 30px;
+	margin-top: 0;
+    font-size: 20px;
 }
 
 .card img {
-	width: 40%;
+	width: 30%;
 	height: auto;
 	border: 1px solid #cecece;
 	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 30px;
 	float: left;
+
+}
+
+.card-date{
+	font-size: 15px;
 }
 
 .card-text{
-    margin-left: 8rem;
-    margin-right: 8rem;
-	font-size: 25px;
+    margin-left: auto;
+	font-size: 20px;
+}
+
+
+.footer {
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	background-color: #b3d4f5;
+	text-decoration: none;
+}
+
+.footer p {
+	color: #1F2D3D;
+	font-family: 'Recursive', sans-serif;
+	text-decoration: none;
+}
+
+.footer p:first-child {
+	margin-bottom: 8px;
+}
+
+.footer a{
+	color: #1F2D3D;
+	font-family: 'Recursive', sans-serif;
+	text-decoration: none;
+
 }

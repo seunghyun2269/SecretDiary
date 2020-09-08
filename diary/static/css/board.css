@@ -1,6 +1,6 @@
 body {
-	margin:0; 
-	padding:0
+	margin: 0;
+	padding: 0
 }
 
 .header {
@@ -8,8 +8,8 @@ body {
 	height: 50px;
 	padding: 10px;
 	margin: 0%;
-    background-color: #6FA0BF; 
-    text-align: center;
+	background-color: #6FA0BF;
+	text-align: center;
 }
 
 .logo::before {
@@ -31,7 +31,7 @@ body {
 	background-image: url('../images/diaryemoji.png');
 	background-repeat: no-repeat;
 	background-position: 10px;
-	background-size: contain;  
+	background-size: contain;
 
 }
 
@@ -54,7 +54,7 @@ body {
 .link {
 	text-align: center;
 	font-family: 'Nanum Gothic', sans-serif;
-  
+
 
 }
 
@@ -115,4 +115,30 @@ body {
 	height: auto;
 	border: 1px solid #cecece;
 	margin-top: 10px;
+}
+
+
+.footer {
+	width: 100%;
+	height: 100px;
+	padding: 20px;
+	background-color: #b3d4f5;
+	text-decoration: none;
+}
+
+.footer p {
+	color: #1F2D3D;
+	font-family: 'Recursive', sans-serif;
+	text-decoration: none;
+}
+
+.footer p:first-child {
+	margin-bottom: 8px;
+}
+
+.footer a{
+	color: #1F2D3D;
+	font-family: 'Recursive', sans-serif;
+	text-decoration: none;
+
 }
