@@ -6,9 +6,9 @@ urlpatterns = [
     path('board/', views.board, name = 'board'),
     path('create/', views.create, name = 'create'),
     # /posts/5/ 
-    path('<int:pk>/', views.diarypage, name = 'diarypage'),
+    path('<int:post_id>/', views.diarypage, name = 'diarypage'),
     # /posts/5/update
-    path('<int:pk>/update', views.update, name='update'),
+    path('<int:post_id>/update', views.update, name='update'),
     # /posts/5/delete
-    path('<int:pk>/delete/', views.delete, name = 'delete'),
+    path('<int:post_id>/delete/', views.delete, name = 'delete'),
 ]
