@@ -7,18 +7,23 @@ from .forms import PostForm
 # Create your views here.
 
 def board(request):
-    return render(request, "board.html")
+    post_list = Post.objects.all()
+    context = {'post_list': post_list}
+    return render(request, 'board.html', context)
 
-def diarypage(request):
-    return render(request, "diarypage.html")
+def diarypage(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    return render(request, "diarypage.html", {'post': post})
 
 def main(request):
     posts = Post.objects
     return render(request, 'create.html', {'posts':posts})
 
+'''
 def diary(request, pk):
     post = get_object_or_404(Post, pk = pk)
     return render(request, 'diary.html', {'post':post})
+'''
 
 def create(request):
     if request.method == 'POST':
