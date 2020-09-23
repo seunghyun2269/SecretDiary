@@ -23,3 +23,15 @@
         margin-left: 25em;
     }
 }
+
+body{
+    align-content: center; text-align: center;
+}
+
+.h1{
+    font-family: 'Recursive', sans-serif;
+}
+
+.form-group{
+    padding: 50px 20px;
+}
